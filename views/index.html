@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/bootstrap/bootstrap.min.css">
+    <title>Gestión de Personas</title>
+</head>
+
+<body>
+    <nav class="navbar bg-primary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Gestión de Personas</a>
+        </div>
+    </nav>
+
+    <section class="container">
+        <div class="d-flex mt-4">
+            <div class="col-3 pe-4">
+                <h4>Formulario de registro</h4>
+                <form>
+                    <div class="mb-3">
+                        <label for="txt-rut" class="form-label">RUT</label>
+                        <input type="text" class="form-control" id="txt-rut">
+                        <div id="error-rut" class="form-text"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="txt-nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="txt-nombre">
+                        <div id="error-nombre" class="form-text"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="txt-apellido" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" id="txt-apellido">
+                        <div id="error-apellido" class="form-text"></div>
+                    </div>
+                    
+                    <button type="reset" class="btn btn-warning">Limpiar</button>
+                    <button type="submit" class="btn btn-primary">Registrar</button>
+                </form>
+            </div>
+            <div class="col-9">
+                <h4>Listado de personas</h4>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Id.</th>
+                            <th>RUT</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>
