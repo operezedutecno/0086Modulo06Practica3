@@ -1,0 +1,1 @@
+[{"id":"9465d336-927a-44ac-8d07-8a8fc84ae637","rut":"11.111.111-1","nombre":"Juan","apellido":"Benitez"},{"id":"a651721e-286b-4710-892b-f2e43d223623","rut":"22.222.222-2","nombre":"Osman","apellido":"Pérez"}]
