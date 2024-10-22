@@ -7,6 +7,8 @@ $(() => {
         const nombre = $("#txt-nombre").val();
         const apellido = $("#txt-apellido").val();
 
+        $(".error").addClass("d-none")
+
         $.ajax({
             method: "GET",
             url: `${urlBase}/registrar-persona`,
@@ -16,10 +18,14 @@ $(() => {
                 apellido
             },
             success: function(data) {
-                // alert("Datos enviados")
+                alert(data.message)
             },
             error: function(error) {
-                alert("Ha sucedido un error")
+                if(error.status == 409) {
+                    $("#alert-validation").removeClass("d-none").html(error?.responseJSON?.message || '')
+                } else {
+                    $("#alert-error").removeClass("d-none").html(error?.responseJSON?.message || 'Error interno')
+                }
             }
         })
     })
