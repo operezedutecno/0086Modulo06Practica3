@@ -68,9 +68,14 @@ app.get("/registrar-persona", (request, response) => {
     } catch (error) {
         response.status(500).json({ message: "Ocurrió un error, intente más tarde."})
     }
+})
 
 
-    
+app.get("/listar-personas", (req, resp) => {
+    const contentString = readFileSync(dataPersonas, "utf-8");
+    const contentJS = JSON.parse(contentString);
+
+    resp.json({ message: "Listado de personas registradas", data: contentJS })
 })
 
 
